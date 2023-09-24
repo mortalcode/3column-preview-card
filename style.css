@@ -1,0 +1,137 @@
+:root {
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --Verylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Verylightgray);
+  color: var(--paragraphs);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+main {
+  height: 60%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.container {
+  height: 80%;
+  width: 17%;
+  padding: 2.5vw;
+  display: grid;
+  line-height: 1.4vw;
+}
+.container button {
+  display: flex;
+  align-items: center;
+}
+#sedan {
+  background-color: var(--Brightorange);
+  border-radius: 10px 0 0 10px;
+}
+#suv {
+  background-color: var(--Darkcyan);
+}
+#luxury {
+  background-color: var(--Verydarkcyan);
+  border-radius: 0 10px 10px 0;
+}
+h1 {
+  font-size: 2.2vw;
+  font-family: "Big Shoulders Display";
+  color: var(--Verylightgray);
+}
+p {
+  font-size: 14px;
+}
+
+button {
+  border: 2px solid var(--Verylightgray);
+  border-radius: 8rem 8rem 8rem 8rem;
+  margin: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--Verylightgray);
+  font-family: "Lexend Deca", sans-serif;
+}
+button:is(:hover, :focus) {
+  background-color: white;
+  color: var(--Darkcyan);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  color: crimson;
+}
+
+@media (max-width: 675px) {
+  html body {
+    height: 170vh;
+  }
+  main {
+    height: 150vh;
+    width: 90%;
+    flex-direction: column;
+  }
+  .container {
+    /* padding-top: 2000px; */
+    height: 90vh;
+    width: 70%;
+    padding: 11vw;
+    line-height: 25vw;
+  }
+  #sedan {
+    background-color: var(--Brightorange);
+    border-radius: 10px 10px 0 0;
+  }
+  #suv {
+    background-color: var(--Darkcyan);
+  }
+  #luxury {
+    background-color: var(--Verydarkcyan);
+    border-radius: 0 0px 10px 10px;
+  }
+
+  h1 {
+    font-size: 10vw;
+  }
+  p {
+    font-size: 4vw;
+    line-height: 5vw;
+    font-weight: 100;
+  }
+  footer {
+    display: none;
+  }
+  button {
+    background-color: white;
+    color: var(--Darkcyan);
+    padding: 20px;
+  }
+}
